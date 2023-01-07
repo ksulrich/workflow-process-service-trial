@@ -19,12 +19,13 @@ services:
     stop_grace_period: 2m
     environment:
       - LICENSE=accept
+      - IBM_JAVA_OPTIONS="-Xmx1563M"
       ###########################################################################################################
       # EXTERNAL_HOSTNAME must not be localhost if you want to access Workplace or BA Studio from a web browser
       # which is not running on the docker host.
       # In such case, replace EXTERNAL_HOSTNAME with the actual hostname of the docker host.
       ###########################################################################################################
-      - EXTERNAL_HOSTNAME=localhost
+      - EXTERNAL_HOSTNAME=aggraded1.fyre.ibm.com
       - EXTERNAL_HTTPS_PORT=9443
       # PFS properties
       - PFS_ENABLE=false
